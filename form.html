@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Salary Prediction 💼</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #dae2f8, #d6a4a4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h2 {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        input[type=number] {
+            width: 100%;
+            padding: 8px 10px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Salary Prediction 💼</h2>
+
+    <form action="/predict" method="POST">
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Workclass</label>
+        <input type="number" name="workclass" required>
+
+        <label>Fnlwgt</label>
+        <input type="number" name="fnlwgt" required>
+
+        <label>Education Number</label>
+        <input type="number" name="education_num" required>
+
+        <label>Marital Status</label>
+        <input type="number" name="marital_status" required>
+
+        <label>Occupation</label>
+        <input type="number" name="occupation" required>
+
+        <label>Relationship</label>
+        <input type="number" name="relationship" required>
+
+        <label>Race</label>
+        <input type="number" name="race" required>
+
+        <label>Sex (1=Male, 0=Female)</label>
+        <input type="number" name="sex" required>
+
+        <label>Capital Gain</label>
+        <input type="number" name="capital_gain" required>
+
+        <label>Capital Loss</label>
+        <input type="number" name="capital_loss" required>
+
+        <label>Hours per Week</label>
+        <input type="number" name="hours_per_week" required>
+
+        <label>Native Country</label>
+        <input type="number" name="native_country" required>
+
+        <input type="submit" value="Predict Salary">
+    </form>
+</body>
+</html>
